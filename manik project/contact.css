@@ -1,0 +1,254 @@
+/* Navigation Styles */
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  :root {
+    --primary-color: #b74b4b;
+    --primary-color-dark: #b74b4b;
+    --secondary-color: #b74b4b;
+    --text-dark: #7c91ad;
+    --text-light: #92a7d1;
+    --extra-light:black;
+    --max-width: 1200px;
+}
+  
+  
+
+  nav {
+    
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+
+  nav a.active {
+    color:#b74b4b ;
+    font-weight: bold;
+}
+  
+  .nav__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .logo a {
+    color:black;
+    text-decoration: none;
+  }
+  
+  .checkbox {
+    display: none;
+  }
+  
+  .checkbox + label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 24px;
+    
+  }
+  
+  .checkbox + label i {
+    font-size: 24px;
+  }
+  
+  .checkbox:checked + label i {
+    transform: rotate(180deg);
+  }
+  
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+  }
+  
+  ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: 0.3s;
+  }
+  ul a {
+    color:   #00698f;
+    font-weight: bold;
+    text-decoration: none;
+   
+  }
+  
+  ul li a:hover {
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
+  
+  /* Container Styles */
+  
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color:white;
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px 1px;
+    margin-bottom: 20px;
+    border-radius: 5px ;
+    border: 1px solid black;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+    .nav__content {
+      flex-direction: column;
+    }
+    .logo {
+      margin-bottom: 10px;
+    }
+    ul {
+      flex-direction: column;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .container {
+      margin: 20px;
+      }
+    }
+  
+  
+  /* Animation styles */
+  
+  .nav__content {
+    transition: transform 0.5s ease-in-out;
+    }
+    
+    .nav__content:hover {
+    transform: translateY(-10px);
+    }
+    
+    .checkbox + label {
+    transition: transform 0.5s ease-in-out;
+    }
+    
+    .checkbox:checked + label {
+    transform: rotate(180deg);
+    }
+    
+    .section {
+    animation: fadeIn 2s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    }
+    
+    .content {
+    animation: slideIn 2s ease-in-out;
+    }
+    
+    @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+    }
+    
+    
+    @keyframes zoomIn {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+    }
+    
+    .action__btns button {
+    transition: background-color 0.5s ease-in-out;
+    }
+    
+    .action__btns button:hover {
+    background-color: #337ab7;
+    color: #fff;
+    }
+    
+    
+    @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      }
+    }

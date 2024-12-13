@@ -1,0 +1,247 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  body {
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+    color: #7c91ad;
+    text-decoration: none;
+    
+  }
+  
+  :root {
+    --primary-color: #b74b4b;
+    --primary-color-dark: #b74b4b;
+    --secondary-color: #b74b4b;
+    --text-dark: #7c91ad;
+    --text-light: #92a7d1;
+    --extra-light:black;
+    --max-width: 1200px;
+}
+  
+  nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+  
+  .nav__content {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: 0.3s;
+  }
+   
+  nav .logo a:hover {
+    color: var(--primary-color-dark);
+  }
+  
+  
+  nav .checkbox {
+    display: none;
+  }
+  
+  
+  
+  
+  .about{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+      background: var(--secondar-bg-color);
+      padding: 6rem;
+     
+    
+    
+    }
+    nav a.active {
+        color:#b74b4b ;
+        font-weight: bold;
+       
+      }
+      
+      nav input {
+        display: none;
+      }
+      nav .checkbox i {
+        font-size: 2rem;
+        color: var(--primary-color);
+        cursor: pointer;
+      }
+      
+    
+    .about{
+      color:#7c91ad;
+    }.
+    .heading{
+      font-size: 5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    
+    }
+     
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+  }
+  
+  ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: 0.3s;
+  }
+  
+  ul li a:hover {
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
+    span{
+      color: var(--main-color);
+    }
+    
+    .about-img{
+      position: relative;
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .about-img img {
+      width: 90%;
+      border-radius: 50%;
+      border: .2rem solid var(--main-color);
+    }
+    
+    .about-img img {
+      box-shadow: 0 0 15px #7c91ad, /* inner glow */
+                  0 0 30px #7c91ad, /* outer glow */
+                  0 0 45px #7c91ad; /* outermost glow */
+      transform: scale(1.1); /* zoom in on hover */
+      }
+    
+    .about-img .circle-spin{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border-top: 2rem solid var(--secondar-bg-color);
+      border-bottom: 2rem solid var(--secondar-bg-color);
+      border-left: 2rem solid var(--main-color);
+      border-right: 2rem solid var(--main-color);
+      }
+  
+  /* Animation styles */
+  
+  .nav__content {
+    transition: transform 0.5s ease-in-out;
+    }
+    
+    .nav__content:hover {
+    transform: translateY(-10px);
+    }
+    
+    .checkbox + label {
+    transition: transform 0.5s ease-in-out;
+    }
+    
+    .checkbox:checked + label {
+    transform: rotate(180deg);
+    }
+    
+    .section {
+    animation: fadeIn 2s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    }
+    
+    .content {
+    animation: slideIn 2s ease-in-out;
+    }
+    
+    @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+    }
+    
+    .image {
+    animation: zoomIn 2s ease-in-out;
+    }
+    
+    @keyframes zoomIn {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+    }
+    
+    
+    
+    @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      }
+    }
+  
+  
+    @keyframes fade-in {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    .heading {
+        color: #7c91ad;
+      font-size: 4rem;
+      text-align: center;
+      animation: fade-in 2s; /* add animation to heading */
+    }
+  

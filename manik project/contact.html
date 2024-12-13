@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <script src="contact.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav__content">
+            <div class="logo"><a href="#">PORTFOLIO</a></div>
+            <label for="check" class="checkbox">
+                <i class="ri-menu-line"></i>
+            </label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Project</a></li>
+                <a href="#" class="active">Contact</a>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+            
+            <label for="contact-number">Contact Number:</label>
+            <input type="tel" id="contact-number" name="contact-number" placeholder="Your Contact Number">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com">
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Your Address"></textarea>
+            
+            <label for="language-known">Language Known:</label>
+            <select id="language-known" name="language-known">
+                <option value="">Select Language</option>
+                <option value="English">English</option>
+                <option value="Spanish">Spanish</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Other">Other</option>
+            </select>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
